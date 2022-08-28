@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar familiares</title>
+</head>
+<body>
+    <h1>Familiares agregados a la DB hasta el momento:</h1>
+    <br>
+    <ul>
+        {% for x in familia %}
+        <li>Nombre: {{x.nombre}} - Edad: {{x.edad}} - Fecha de nacimiento: {{x.fecha_nacimiento}}</li>
+        {% endfor %}
+
+    </ul>
+
+    <h3>Gracias por consultar los datos.</h3>
+    <br>
+    <a href="http://127.0.0.1:8000/inicio/">Volver al inicio</a>
+    
+</body>
+</html>

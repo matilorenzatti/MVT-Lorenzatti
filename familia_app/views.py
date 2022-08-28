@@ -13,8 +13,17 @@ def agregar_familia(request):
         integrante = Familia(nombre=familia["nombre"][x], edad=familia["edad"][x], fecha_nacimiento = familia["fecha_nacimiento"][x])
         integrante.save()
     
-    template = loader.get_template("familia.html")
+    template = loader.get_template("agregar.html")
     doc = template.render(familia)
 
     return HttpResponse(doc)
+
+def listar_familiares(request):
+    query = Familia.objects.all()
+    familiares_db = {"familia":query}
+    plantilla = loader.get_template("listar.html")
+    doc = plantilla.render(familiares_db)
+    
+    return HttpResponse(doc)
+
 
