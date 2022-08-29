@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from familia_mtv.views import inicio
-from familia_app.views import listar_familiares, agregar_familia
+from familia_app.views import listar_familiares, agregar_familia, consulta
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("inicio/", inicio),
     path("agregar_familiares/", agregar_familia),
     path("listar_familiares/", listar_familiares),
+    path("consulta/<name>/", consulta)
 ]

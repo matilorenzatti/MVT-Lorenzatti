@@ -1,3 +1,4 @@
+from tkinter.font import families
 from django.shortcuts import render
 from django.http import HttpResponse
 from familia_app.models import Familia
@@ -26,4 +27,10 @@ def listar_familiares(request):
     
     return HttpResponse(doc)
 
+def consulta(request, name):
+    query = Familia.objects.get(nombre = name)
+    registro = {"registro":query}
+    plantilla = loader.get_template("consulta.html")
+    doc = plantilla.render(registro)
 
+    return HttpResponse(doc)

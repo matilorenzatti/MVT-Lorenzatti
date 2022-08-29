@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta registro</title>
+</head>
+<body>
+    <h1>Consulta de registro puntual.</h1>
+    <br>
+    Para consultar un dato puntual, modifique en la URL el nombre. En este caso, se busco Matias, pero puede buscar el nombre que quiera.
+    <br>
+    En caso de que no recuerde el nombre a buscar, vuelva al inicio, y liste los registros existentes en la base de datos.
+
+    <h3>El registro consultado fue: </h3>
+    <ul>
+       
+        <li> Nombre: {{registro.nombre}}</li>
+        <li> Edad: {{registro.edad}}</li>
+        <li> Fecha de nacimiento: {{registro.fecha_nacimiento}}</li>
+        
+
+    </ul>
+
+    <h3>Gracias por consultar los datos.</h3>
+    <a href="http://127.0.0.1:8000/inicio/">Volver al inicio</a>
+</body>
+</html>
